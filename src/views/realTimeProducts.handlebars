@@ -1,0 +1,52 @@
+
+
+
+<div class="forms" >
+   <div>
+     <form id="form"  action="/products" method="post">
+    <h3>Ingresa los datos del nuevo producto</h3>
+    <ul class="form-register">
+      <li>title: <input id="title" type="text" name="title"></li>
+      <li> code: <input id="code" type="text" name="code"></li>
+      <li>description: <input id="description" type="text" name="description"></li>
+      <li>price: <input id="price" type="number" name="price"></li>
+      <li> stock: <input id="stock" type="number" name="stock"></li>
+      <li>category: <input id="category" type="text" name="category"></li>
+    <input type="submit" value="registro">
+    </ul>
+      </form>
+   </div>
+   <div>
+     <form  action="/products/:id" method="post">
+    <h3>Ingresa el id del producto a eliminar</h3>
+    <ul class="form-register">
+      <li>IdDelProducto: <input type="text" name="id"></li>
+    <input type="submit" value="Eliminar">
+    </ul>
+      </form>
+   </div>
+   </div>
+
+   <div>
+     <div id="products" class="div-products">
+{{#if products.length}}
+ {{#each products}}
+  <ul>
+    <li>id:{{id}}</li>
+    <li>title:{{title}}</li>
+    <li>cescription:{{description}}</li>
+    <li>code:{{code}}</li>
+    <li>price:{{price}}</li>
+    <li>stock:{{stock}}</li>
+    <li>category:{{category}}</li>
+
+  </ul>
+  {{/each}}
+  {{/if}}
+  {{#else}}
+<h1>No hay productos</h1>
+{{/else}}
+</div>
+   </div>
+
+

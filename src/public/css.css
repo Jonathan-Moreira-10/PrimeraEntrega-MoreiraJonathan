@@ -1,0 +1,19 @@
+.div-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+};
+
+.form-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+};
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

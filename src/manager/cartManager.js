@@ -26,7 +26,7 @@ export class CartManager {
         products:[]
       };
       const carts = await this.getCarts();
-      const cartExist = carts.find((cart) => cart.id === cart.id);
+      const cartExist = carts.find((existingCart) => existingCart.id === cart.id);
       if (cartExist) {
         throw new Error('Producto ya existe');
       } else {
